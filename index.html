@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Portfolio</title>
+  <style>
+    /* Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: "Poppins", sans-serif;
+      background: linear-gradient(120deg, #1a1a2e, #16213e);
+      color: #eee;
+      line-height: 1.6;
+      scroll-behavior: smooth;
+    }
+
+    /* Header */
+    header {
+      height: 70vh;
+      background: url("header-bg.jpg") no-repeat center/cover;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: white;
+      position: relative;
+    }
+
+    header::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(0,0,0,0.6);
+    }
+
+    header h1, header p {
+      position: relative;
+      z-index: 1;
+    }
+
+    header h1 {
+      font-size: 3rem;
+      letter-spacing: 2px;
+    }
+
+    header p {
+      margin-top: 10px;
+      font-size: 1.2rem;
+    }
+
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: rgba(255,255,255,0.1);
+      backdrop-filter: blur(10px);
+      padding: 10px;
+      text-align: center;
+      z-index: 1000;
+    }
+
+    nav a {
+      color: #fff;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #00d4ff;
+    }
+
+    /* Sections */
+    section {
+      padding: 60px 10%;
+      margin: 40px auto;
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 15px;
+      backdrop-filter: blur(10px);
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      font-size: 2rem;
+      color: #00d4ff;
+    }
+
+    /* About */
+    #about img {
+      width: 100px;
+      border-radius: 50%;
+      display: block;
+      margin: 0 auto 20px;
+      border: 3px solid #00d4ff;
+    }
+
+    #about p {
+      text-align: center;
+      font-size: 1.1rem;
+    }
+
+    /* Skills */
+    .skills {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 15px;
+    }
+
+    .skill-card {
+      background: rgba(0,0,0,0.4);
+      padding: 20px;
+      border-radius: 10px;
+      text-align: center;
+      transition: transform 0.3s, background 0.3s;
+    }
+
+    .skill-card:hover {
+      transform: translateY(-5px);
+      background: rgba(0,0,0,0.6);
+    }
+
+    /* Projects */
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .project {
+      background: rgba(255,255,255,0.08);
+      padding: 15px;
+      border-radius: 12px;
+      transition: transform 0.3s;
+    }
+
+    .project:hover {
+      transform: scale(1.05);
+    }
+
+    .project img {
+      width: 100%;
+      border-radius: 10px;
+    }
+
+    .project h3 {
+      margin-top: 10px;
+    }
+
+    /* Resume Button */
+    .resume-btn {
+      display: block;
+      text-align: center;
+      margin: 20px auto;
+      width: max-content;
+      padding: 12px 25px;
+      background: #00d4ff;
+      color: #000;
+      font-weight: bold;
+      border-radius: 25px;
+      text-decoration: none;
+      transition: background 0.3s;
+    }
+
+    .resume-btn:hover {
+      background: #0099cc;
+    }
+
+    /* Contact */
+    #contact p {
+      text-align: center;
+      font-size: 1.2rem;
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: rgba(0,0,0,0.7);
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation -->
+  <nav>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#resume">Resume</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <!-- Header -->
+  <header>
+    <h1>ANUSHKA SENGAR</h1>
+    <p>Creative Web Developer | Designer | Learner</p>
+  </header>
+
+  <!-- About -->
+  <section id="about">
+    <h2>About Me</h2>
+    <img src="my-photo.jpg" alt="My Photo">
+    <p>Hey there! I am Anushka Sengar a web developer who loves turning ideas into interactive, user-friendly websites. I blend creativity with clean code to build experiences that are fast, functional, and fun to use. When I’m not coding, I’m probably sketching new ideas or geeking out over the latest tech trends.</p>
+  </section>
+
+  <!-- Skills -->
+  <section id="skills">
+    <h2> My Skills</h2>
+    <div class="skills">
+      <div class="skill-card">HTML & CSS</div>
+      <div class="skill-card">JavaScript</div>
+      <div class="skill-card">React</div>
+      <div class="skill-card">Node.js</div>
+      <div class="skill-card">Python</div>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="projects-grid">
+      <div class="project">
+        <img src="project1.jpg" alt="PROJECT 1">
+        <h3>Portfolio Website</h3>
+        <p>A personal portfolio showcasing my work and skills.</p>
+      </div>
+      <div class="project">
+        <img src="project2.jpg" alt="PROJECT 2">
+        <h3>Landing Page</h3>
+        <p>A responsive landing page built with HTML & CSS.</p>
+      </div>
+      <div class="project">
+        <img src="project3.jpg" alt="PROJECT 3">
+        <h3>Calculator</h3>
+        <p>A simple calculator app using HTML, CSS, and JavaScript.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Resume -->
+  <section id="resume">
+    <h2>Resume</h2>
+    <p>You can download my resume below:</p>
+    <a href="resume.pdf" class="resume-btn" download>Download Resume</a>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>Email: anushka@example.com</p>
+    <p>Phone: +91 92645XXXXX</p>
+    <p>LinkedIn: <a href="https://www.linkedin.com/in/anushka-sengar-633098353/" target="_blank">My Profile</a></p>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Anushka Sengar | All Rights Reserved</p>
+  </footer>
+</body>
+</html>
